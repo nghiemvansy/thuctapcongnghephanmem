@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Trang cá nhân</h2>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AccountEdit">
+    Edit account
+  </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BookSettings">
+        Book settings
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Review
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Tóm tắt đơn hàng
+    </button>
+            
+    
+  <!-- Account edit -->
+  <div class="modal" id="AccountEdit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Account setting</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+                <form>
+                        <div class="form-group">
+                          <label for="InputFname">First Name*</label>
+                          <input type="text" class="form-control" id="InputFname" placeholder="Nhập First Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="InputLname">Last Name*</label>
+                          <input type="text" class="form-control" id="InputLname" placeholder="Nhập Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail">Email*</label>
+                            <input type="text" class="form-control" id="InputEmail" placeholder="abc@xyz.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputNumber">Phone Number*</label>
+                            <input type="text" class="form-control" id="InputNumber" placeholder="555-555-5555">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputAddress">Address*</label>
+                            <input type="text" class="form-control" id="InputAddress">
+                        </div>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
+                
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Settings -->
+  <div class="modal" id="BookSettings">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Book Settings</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="InputTitle">Title</label>
+                              <input type="text" class="form-control" id="InputTitle">
+                            </div>
+                            <div class="form-group">
+                              <label for="InputAuthor">Author</label>
+                              <input type="text" class="form-control" id="InputAuthor">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPrice">Price</label>
+                                <input type="text" class="form-control" id="InputPrice">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputDescript">Description</label>
+                                <input type="text" class="form-control" id="InputDescript">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputImage">Image</label>
+                                <input type="text" class="form-control" id="InputImage">
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary">Delete</button>
+                    </form>
+            </div>
+                    
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
