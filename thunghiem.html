@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -22,110 +23,118 @@
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Review">
     Review
   </button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Summary">
     Tóm tắt đơn hàng
   </button>
             
     
-  <!-- Account edit -->
+  <!-- Begin Account edit -->
   <div class="modal" id="AccountEdit">
     <div class="modal-dialog">
       <div class="modal-content">
       
-        <!-- Modal Header -->
+        <!-- Begin Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Account setting</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+        <!-- End Modal Header -->
         
-        <!-- Modal body -->
+        <!-- Begin Modal Body -->
         <div class="modal-body">
           <form>
             <div class="form-group">
               <label for="InputFname">First Name*</label>
-                <input type="text" class="form-control" id="InputFname" placeholder="Nhập First Name">
-                        </div>
-                        <div class="form-group">
-                          <label for="InputLname">Last Name*</label>
-                          <input type="text" class="form-control" id="InputLname" placeholder="Nhập Last Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputEmail">Email*</label>
-                            <input type="text" class="form-control" id="InputEmail" placeholder="abc@xyz.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputNumber">Phone Number*</label>
-                            <input type="text" class="form-control" id="InputNumber" placeholder="555-555-5555">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputAddress">Address*</label>
-                            <input type="text" class="form-control" id="InputAddress">
-                        </div>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-        </div>
-                
+              <input type="text" class="form-control" id="InputFname" placeholder="Nhập First Name">
+            </div>
+            <div class="form-group">
+              <label for="InputLname">Last Name*</label>
+              <input type="text" class="form-control" id="InputLname" placeholder="Nhập Last Name">
+            </div>
+            <div class="form-group">
+              <label for="InputEmail">Email*</label>
+              <input type="text" class="form-control" id="InputEmail" placeholder="abc@xyz.com">
+            </div>
+            <div class="form-group">
+              <label for="InputNumber">Phone Number*</label>
+              <input type="text" class="form-control" id="InputNumber" placeholder="555-555-5555">
+            </div>
+            <div class="form-group">
+              <label for="InputAddress">Address*</label>
+              <input type="text" class="form-control" id="InputAddress">
+            </div>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>  
+        <!-- End Modal Body-->        
       </div>
     </div>
   </div>
+  <!--End Account Edit -->
 
-  <!-- Book Settings -->
+
+
+  <!-- Begin Book Settings -->
   <div class="modal" id="BookSettings">
-        <div class="modal-dialog">
-          <div class="modal-content">
+    <div class="modal-dialog">
+      <div class="modal-content">
           
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Book Settings</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
+        <!-- Begin Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Book Settings</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- End Modal Header -->
             
-            <!-- Modal body -->
-            <div class="modal-body">
-                    <form>
-                            <div class="form-group">
-                              <label for="InputTitle">Title</label>
-                              <input type="text" class="form-control" id="InputTitle">
-                            </div>
-                            <div class="form-group">
-                              <label for="InputAuthor">Author</label>
-                              <input type="text" class="form-control" id="InputAuthor">
-                            </div>
-                            <div class="form-group">
-                                <label for="InputPrice">Price</label>
-                                <input type="text" class="form-control" id="InputPrice">
-                            </div>
-                            <div class="form-group">
-                                <label for="InputDescript">Description</label>
-                                <input type="text" class="form-control" id="InputDescript">
-                            </div>
-                            <div class="form-group">
-                                <label for="InputImage">Image</label>
-                                <input type="text" class="form-control" id="InputImage">
-                            </div>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-primary">Delete</button>
-                    </form>
-            </div>
-                    
+          <!-- Begin Modal Body -->
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="InputTitle">Title</label>
+                <input type="text" class="form-control" id="InputTitle">
+              </div>
+              <div class="form-group">
+                <label for="InputAuthor">Author</label>
+                <input type="text" class="form-control" id="InputAuthor">
+              </div>
+              <div class="form-group">
+                <label for="InputPrice">Price</label>
+                <input type="text" class="form-control" id="InputPrice">
+              </div>
+              <div class="form-group">
+                <label for="InputDescript">Description</label>
+                <input type="text" class="form-control" id="InputDescript">
+              </div>
+              <div class="form-group">
+                <label for="InputImage">Image</label>
+                <input type="text" class="form-control" id="InputImage">
+              </div>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-primary">Delete</button>
+            </form>
           </div>
+          <!-- End Modal Body -->
+                    
         </div>
       </div>
+  </div>
+  <!-- End Book Settings -->
       
-  <!-- Review -->
+  <!-- Begin Review -->
   <div class="modal" id="Review">
     <div class="modal-dialog">
       <div class="modal-content">
       
-        <!-- Modal Header -->
+        <!-- Begin Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Review</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+        <!-- End Modal Header -->
         
-        <!-- Modal body -->
+        <!-- Begin Modal body -->
         <div class="modal-body">
           <div class="row">
             <div class="col-md-3">
@@ -133,17 +142,17 @@
               <input type="text" class="form-control" id="InputTitleReview">
             </div>
             <div class="col-md-3">
-                <label for="InputBookName">Book Name</label>
-                <input type="text" class="form-control" id="InputBookName">
-              </div>
-              <div class="col-md-3">
-                <label for="InputDate">Date</label>
-                <input type="text" class="form-control" id="InputDate">
-              </div>
-              <div class="col-md-3">
-                <label for="InputImage">Image</label>
-                <input type="text" class="form-control" id="InputImage">
-              </div>            
+              <label for="InputBookName">Book Name</label>
+              <input type="text" class="form-control" id="InputBookName">
+            </div>
+            <div class="col-md-3">
+              <label for="InputDate">Date</label>
+              <input type="text" class="form-control" id="InputDate">
+            </div>
+            <div class="col-md-3">
+              <label for="InputImage">Image</label>
+              <input type="text" class="form-control" id="InputImage">
+            </div>            
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -151,19 +160,61 @@
               <textarea class="form-control" rows="5" cols="64"></textarea>
             </div>
           </div>  
-          <div class="row">
-              <div class="col-md-12">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </div>  
-  
+          <div class="row" id="HangReview">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>    
         </div>
+        <!-- End Modal Body -->
                 
       </div>
     </div>
   </div>
 </div>
+<!--End Review -->
+
+  <!-- Begin Summary -->
+  <div class="modal" id="Summary">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Begin Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Tóm tắt đơn hàng</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- End Modal Header -->
+          
+          <!-- Begin Modal body -->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="InputSumName">Họ Tên</label>
+              </div>
+              <div class="col-md-3">
+                <input type="text" class="form-control" id="InputSumName">
+              </div>
+              <div class="col-md-7">
+                <label for="InputSumPhone">Số điện thoại</label>
+                <input type="text" class="form-control" id="InputSumPhone">
+              </div>
+            </div>
+          </div>
+          <!-- End Modal Body -->
+                  
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Summary -->
+  
+
+
+
+
+
 
 </body>
 </html>
