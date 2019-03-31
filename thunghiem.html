@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +27,12 @@
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Summary">
     Tóm tắt đơn hàng
   </button>
-            
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Mua">
+    Quản lý đơn hàng mua
+  </button>
+  
+  
+
     
   <!-- Begin Account edit -->
   <div class="modal" id="AccountEdit">
@@ -150,8 +156,8 @@
               <input type="text" class="form-control" id="InputDate">
             </div>
             <div class="col-md-3">
-              <label for="InputImage">Image</label>
-              <input type="text" class="form-control" id="InputImage">
+              <label for="InputImageReview">Image</label>
+              <input type="text" class="form-control" id="InputImageReview">
             </div>            
           </div>
           <div class="row">
@@ -178,7 +184,7 @@
   <!-- Begin Summary -->
   <div class="modal" id="Summary">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" id="RongSummary">
         
           <!-- Begin Modal Header -->
           <div class="modal-header">
@@ -189,27 +195,347 @@
           
           <!-- Begin Modal body -->
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-2">
+
+            <div class="row p-3">
+              <div class="col-2">
                 <label for="InputSumName">Họ Tên</label>
               </div>
-              <div class="col-md-3">
+              <div class="col-3">
                 <input type="text" class="form-control" id="InputSumName">
               </div>
-              <div class="col-md-7">
+              <div class="col-3">
                 <label for="InputSumPhone">Số điện thoại</label>
+              </div>
+              <div class="col-4">
                 <input type="text" class="form-control" id="InputSumPhone">
               </div>
             </div>
+
+            <div class="row p-3">
+              <div class="col-4">
+                <label for="InputGiaoHang">Địa chỉ giao hàng</label>
+              </div>
+              <div class="col-8">
+                <input type="text" class="form-control" id="InputGiaoHang">
+              </div>  
+            </div>
+
+            <div class="row p-3">
+              <div class="col-5">
+                <label>Hình thức thanh toán</label>
+              </div>
+              <div class="col-7">
+                <select class="form-control">
+                  <option value="tienmat">Thanh toán bằng tiền mặt khi nhận hàng</option>
+                  <option value="tindung">Thanh toán bằng thẻ tín dụng</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row p-3">
+              <div class="col-3">
+                <label for="InputGhiChu">Ghi chú</label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control" id="InputGhiChu">
+              </div>
+            </div>
+  
+            <div class="row p-3">
+              <div class="col-3">
+                <label for="InputTenSach">Tên sách</label>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control" id="InputTenSach">
+              </div>
+              <div class="col-2">
+                <label for="InputMaSo">Mã số</label>
+              </div>
+              <div class="col-3">
+                <input type="text" class="form-control" id="InputMaSo">
+              </div>
+            </div>
+  
+            <div class="row p-3">
+              <div class="col-4">
+              </div>
+              <div class="col-4">
+                <label for="InputThanhTien">Thành tiền</label>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control" id="InputThanhTien">
+              </div>
+            </div>
+  
+            <div class="row p-3">
+              <div class="col-4">
+              </div>
+              <div class="col-4">
+                <label for="InputVanChuyen">Phí vận chuyển</label>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control" id="InputVanChuyen">
+              </div>
+            </div>
+
+            <div class="row p-3">
+              <div class="col-4">
+              </div>
+              <div class="col-4">
+                <label for="InputTongCong">Tổng cộng</label>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control" id="InputTongCong">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-5">
+              </div>
+              <div class="col-7">
+                <button type="button" class="btn btn-primary kichthuocbutton" data-dismiss="modal">Hủy</button>
+                <button type="submit" class="btn btn-primary kichthuocbutton">Đặt hàng</button>    
+              </div>
+            </div>
+                  
           </div>
           <!-- End Modal Body -->
                   
         </div>
       </div>
     </div>
-  </div>
-  <!--End Summary -->
+    <!--End Summary -->
   
+
+  <!-- Begin Quan Ly Don Hang Mua -->
+  <div class="modal" id="Mua">
+    <div class="modal-dialog">
+      <div class="modal-content" id="quanlydonhang">
+        
+        <!-- Begin Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Quản lý đơn hàng mua</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- End Modal Header -->
+          
+        <!-- Begin Modal Body -->
+        <div class="modal-body">
+          <div id="cuon">
+
+              <div class="row">
+                  <div class="col-12">
+      
+                    <div class="row">
+                      <div class="col-12">
+                        <p>
+                          <strong>Đặt hàng </strong>
+                          <a href="#">#332122738</a><br>
+                          Đặt ngày 09/07/2017
+                        </p>
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-2">
+                        <h4>ID123456</h4>
+                      </div>
+                      <div class="col-2">
+                        <img src="theodoimua.jpg" alt="Khong load anh duoc" width="90px" height="110px">
+                      </div>
+                      <div class="col-2">
+                        <h4>Tôi học đại học</h4>
+                      </div>
+                      <div class="col-2">
+                        <p>
+                          Thành tiền<br>
+                          159.000 VND
+                        </p>                  
+                      </div>
+                      <div class="col-2">
+                        <p>
+                          Thanh toán<br>
+                          Thanh toán khi nhận hàng
+                        </p>
+                      </div>
+                      <div class="col-2">
+                        <h4>Người mua: abc</h4>   
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>              
+                      </div>
+                    </div>
+      
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+        
+                      <div class="row">
+                        <div class="col-12">
+                          <p>
+                            <strong>Đặt hàng </strong>
+                            <a href="#">#332122738</a><br>
+                            Đặt ngày 09/07/2017
+                          </p>
+                        </div>
+                      </div>
+        
+                      <div class="row">
+                        <div class="col-2">
+                          <h4>ID123456</h4>
+                        </div>
+                        <div class="col-2">
+                          <img src="theodoimua.jpg" alt="Khong load anh duoc" width="90px" height="110px">
+                        </div>
+                        <div class="col-2">
+                          <h4>Tôi học đại học</h4>
+                        </div>
+                        <div class="col-2">
+                          <p>
+                            Thành tiền<br>
+                            159.000 VND
+                          </p>                  
+                        </div>
+                        <div class="col-2">
+                          <p>
+                            Thanh toán<br>
+                            Thanh toán khi nhận hàng
+                          </p>
+                        </div>
+                        <div class="col-2">
+                          <h4>Người mua: abc</h4>   
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>              
+                        </div>
+                      </div>
+        
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-12">
+          
+                        <div class="row">
+                          <div class="col-12">
+                            <p>
+                              <strong>Đặt hàng </strong>
+                              <a href="#">#332122738</a><br>
+                              Đặt ngày 09/07/2017
+                            </p>
+                          </div>
+                        </div>
+          
+                        <div class="row">
+                          <div class="col-2">
+                            <h4>ID123456</h4>
+                          </div>
+                          <div class="col-2">
+                            <img src="theodoimua.jpg" alt="Khong load anh duoc" width="90px" height="110px">
+                          </div>
+                          <div class="col-2">
+                            <h4>Tôi học đại học</h4>
+                          </div>
+                          <div class="col-2">
+                            <p>
+                              Thành tiền<br>
+                              159.000 VND
+                            </p>                  
+                          </div>
+                          <div class="col-2">
+                            <p>
+                              Thanh toán<br>
+                              Thanh toán khi nhận hàng
+                            </p>
+                          </div>
+                          <div class="col-2">
+                            <h4>Người mua: abc</h4>   
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>              
+                          </div>
+                        </div>
+          
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+            
+                          <div class="row">
+                            <div class="col-12">
+                              <p>
+                                <strong>Đặt hàng </strong>
+                                <a href="#">#332122738</a><br>
+                                Đặt ngày 09/07/2017
+                              </p>
+                            </div>
+                          </div>
+            
+                          <div class="row">
+                            <div class="col-2">
+                              <h4>ID123456</h4>
+                            </div>
+                            <div class="col-2">
+                              <img src="theodoimua.jpg" alt="Khong load anh duoc" width="90px" height="110px">
+                            </div>
+                            <div class="col-2">
+                              <h4>Tôi học đại học</h4>
+                            </div>
+                            <div class="col-2">
+                              <p>
+                                Thành tiền<br>
+                                159.000 VND
+                              </p>                  
+                            </div>
+                            <div class="col-2">
+                              <p>
+                                Thanh toán<br>
+                                Thanh toán khi nhận hàng
+                              </p>
+                            </div>
+                            <div class="col-2">
+                              <h4>Người mua: abc</h4>   
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>              
+                            </div>
+                          </div>
+            
+                        </div>
+                      </div>                  
+          </div>
+
+    </div>
+
+
+    
+
+
+
+          <div class="row">
+            <div class="col-12">
+              <button type="button" class="btn btn-primary">Xem thêm</button>
+            </div>
+          </div>
+
+        </div>  
+        <!-- End Modal Body-->        
+      </div>
+    </div>
+  </div>
+  <!--End Quan Ly Don Hang Mua -->
 
 
 

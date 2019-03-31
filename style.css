@@ -2,4 +2,18 @@
     margin-top: 5px;
     height: 40px;
 }
-
+#RongSummary {
+    width: 700px;
+}
+.kichthuocbutton {
+    width: 115px;
+}
+#quanlydonhang {
+    width: 800px;
+}
+.checked {
+    color: orange;
+}
+#cuon {
+    overflow: scroll;
+}
