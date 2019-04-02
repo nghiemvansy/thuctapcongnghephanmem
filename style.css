@@ -2,9 +2,11 @@
     margin-top: 5px;
     height: 40px;
 }
+/*
 #RongSummary {
     width: 700px;
 }
+*/
 .kichthuocbutton {
     width: 115px;
 }
@@ -17,3 +19,12 @@
 #cuon {
     overflow: scroll;
 }
+
+@media only screen and (min-width: 1024px) {
+    #RongSummary {
+        width: 700px;
+    }    
+}
+
+
+
