@@ -23,6 +23,25 @@
 .rongmuaban {
     width: 1200px;
 }
+.org_base{
+    background-color: orange;
+}
+.grey_base{
+    background-color: rgb(203, 207, 207);
+}
+.white_text{
+    color: white;
+    font-weight: bold;
+}
+.text_link{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin:auto;
+}
+.center_block{
+    margin: auto;
+}
 /*
 .kichthuocmuaban {
     max-width: 1200px;

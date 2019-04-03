@@ -1,0 +1,35 @@
+﻿body{
+    background-color: rgb(245, 239, 239);
+}
+.avatar {
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.name, .org_text{
+    color: orange;
+}
+.r_text {
+    color: red;
+}
+.id{
+    color: rgb(240, 238, 234);
+}
+.center_align{
+    text-align: center;
+}
+.margin_auto{
+    margin: auto;
+}
+.sub_title{
+    border-bottom: orange 2px solid;
+}
+.base_color{
+    background-color: orange;
+}
+.info {
+    background-color: white;
+}
+.book_title, .price{
+    font-size: 20px;
+}
