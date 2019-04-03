@@ -1,0 +1,71 @@
+.chinhlai {
+    max-width: 380px;
+}
+
+.kichthuocbutton {
+    width: 115px;
+}
+#cuon {
+    height: 522px;
+    overflow-y: scroll;
+}
+.hinhsach {
+    width: 90px;
+    height: 110px;
+}
+
+.suadonhang {
+    margin-right: 0px;
+}
+.canhgiua {
+    line-height: 38px;
+}
+.rongmuaban {
+    width: 1200px;
+}
+/*
+.kichthuocmuaban {
+    max-width: 1200px;
+}
+*/
+
+
+/*
+@media (min-width: 640px) {
+    
+}
+
+@media (min-width: 480px) {
+    
+}
+
+@media (min-width: 480px) {
+}
+*/
+
+@media (min-width: 400px) {
+    .kichthuocmuaban {
+        max-width: 500px;    
+    }
+    .rongmuaban {
+        width: 500px;
+    }
+    
+
+}
+
+@media (min-width: 1200px) {
+    #RongSummary {
+        width: 700px;
+    }    
+    .kichthuocmuaban {
+        max-width: 1200px;    
+    }
+    .rongmuaban {
+        width: 1200px;
+    }
+    
+
+}
+
+
