@@ -42,6 +42,11 @@
 .center_block{
     margin: auto;
 }
+.org_text{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
 /*
 .kichthuocmuaban {
     max-width: 1200px;
@@ -88,3 +93,27 @@
 }
 
 
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+  
+.icon {
+    padding: 10px;
+    background: orange;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+  
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
