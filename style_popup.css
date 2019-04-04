@@ -47,6 +47,9 @@
     font-weight: bold;
     font-size: 20px;
 }
+.center_text{
+    text-align: center;
+}
 /*
 .kichthuocmuaban {
     max-width: 1200px;
